@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-## These two functions cache the inverse of a matrix.
-
-## This function creates a special "matrix" object that can cache its inverse.
-=======
 ## The pair of functions that can cache the inverse of a matrix.
 
 ## This function creates a special "matrix" object and cache its inverse.
->>>>>>> origin/master
-
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
 ## set and get value of matrix  
@@ -23,21 +16,13 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set=set, get=get,
        setmatrix=setmatrix,
        getmatrix=getmatrix)
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 }
 
 
 ## This function computes the inverse of the matrix.
-
-<<<<<<< HEAD
 cacheSolve <- function(x=matrix(), ...) {
-=======
 cacheSolve <- function(x, ...) {
 ## Return a matrix that is the inverse of 'x'
->>>>>>> origin/master
 ## If inverse is already calculated, return the directly.
   m<-x$getmatrix()
   if(!is.null(m)){
@@ -50,4 +35,3 @@ cacheSolve <- function(x, ...) {
   x$setmatrix(m)
   m
 }
-
