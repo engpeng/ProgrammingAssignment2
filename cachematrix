@@ -1,0 +1,18 @@
+## This function creates a special "matrix" object that can cache its inverse.
+
+makeCacheMatrix <- function(x = matrix()) {
+  m<-NULL
+## set and get value of matrix  
+  set<-function(y){
+    x<<-y
+    m<<-NULL
+  }
+  get<-function() x 
+## set and get value of inverse
+  setmatrix<-function(solve) m<<- solve 
+  getmatrix<-function() m
+## Return matrix
+  list(set=set, get=get,
+       setmatrix=setmatrix,
+       getmatrix=getmatrix)
+}
